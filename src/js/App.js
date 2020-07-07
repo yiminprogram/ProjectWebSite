@@ -19,11 +19,21 @@ const changeColor = (target) => {
 
 const profileBtn = document.querySelector('#profile-btn');
 profileBtn.addEventListener('click', () => {
-  getMainPage('https://yiminprogram.github.io/ProjectWebSite/src/profile.html');
+  getMainPage('./profile.html');
   changeColor(profileBtn);
 })
 const portfolio = document.querySelector('#portfolio');
 portfolio.addEventListener('click', () => {
-  getMainPage('https://yiminprogram.github.io/ProjectWebSite/src/portfolio.html');
+  getMainPage('./portfolio.html');
   changeColor(portfolio);
 })
+// const profileBtn = document.querySelector('#profile-btn');
+// profileBtn.addEventListener('click', () => {
+//   getMainPage('https://yiminprogram.github.io/ProjectWebSite/src/profile.html');
+//   changeColor(profileBtn);
+// })
+// const portfolio = document.querySelector('#portfolio');
+// portfolio.addEventListener('click', () => {
+//   getMainPage('https://yiminprogram.github.io/ProjectWebSite/src/portfolio.html');
+//   changeColor(portfolio);
+// })
