@@ -1,11 +1,11 @@
 const getMainPage = (link) => {
   const request = new XMLHttpRequest();
-  request.open('get', link);
-  request.onload = function () {
+  request.open('get', link, false);
+  request.onload = () => {
     const content = document.querySelector('#target');
-    content.innerHTML = this.responseText;
+    content.innerHTML = request.responseText;
   }
-  request.send();
+  request.send(null);
 }
 const sideBtn = document.querySelector('nav').children;
 const changeColor = (target) => {
@@ -15,25 +15,39 @@ const changeColor = (target) => {
   })
 }
 
-
-
 const profileBtn = document.querySelector('#profile-btn');
 profileBtn.addEventListener('click', () => {
   getMainPage('./profile.html');
   changeColor(profileBtn);
 })
-const portfolio = document.querySelector('#portfolio');
-portfolio.addEventListener('click', () => {
+const portfolioBtn = document.querySelector('#portfolio-btn');
+portfolioBtn.addEventListener('click', () => {
   getMainPage('./portfolio.html');
-  changeColor(portfolio);
+  changeColor(portfolioBtn);
+  portfolio();
 })
-// const profileBtn = document.querySelector('#profile-btn');
-// profileBtn.addEventListener('click', () => {
-//   getMainPage('https://yiminprogram.github.io/ProjectWebSite/src/profile.html');
-//   changeColor(profileBtn);
-// })
-// const portfolio = document.querySelector('#portfolio');
-// portfolio.addEventListener('click', () => {
-//   getMainPage('https://yiminprogram.github.io/ProjectWebSite/src/portfolio.html');
-//   changeColor(portfolio);
-// })
+
+
+
+//------------------------------------------------------------
+const portfolio = () => {
+  const modal = document.querySelector('.modal');
+  const gallery = document.querySelector('.gallery');
+  modal.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+      modal.classList.remove('open');
+    }
+  })
+
+  gallery.addEventListener('click', (e) => {
+    if (e.target.nodeName === 'IMG') {
+      const src = e.target.getAttribute('src');
+      const tagImg = modal.children[0];
+      const tagName = modal.children[1];
+      const fileName = e.target.getAttribute('data-fileName');
+      tagImg.setAttribute('src', src);
+      tagName.textContent = fileName;
+      modal.classList.add('open');
+    }
+  })
+}

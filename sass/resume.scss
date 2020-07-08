@@ -95,6 +95,7 @@ html {
     }
     //--------------------------------------------------------
     > address {
+      width: 100%;
       margin-top: auto;
       word-wrap: break-word;
       font-size: $font-s;
@@ -202,4 +203,33 @@ html {
       }
     }
   }
+}
+
+.modal {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: #000;
+  opacity: 0;
+  transition: 0.3s;
+
+  > img {
+    max-width: 65%;
+    min-width: 30%;
+    margin-bottom: 3%;
+  }
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
 }
