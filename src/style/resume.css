@@ -162,6 +162,10 @@ html {
           box-shadow: 5px 5px 10px 5px #ddd;
 }
 
+.container > main > .experience > .ex-content > .ex-text {
+  padding: 5%;
+}
+
 .container > main .portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -289,7 +293,7 @@ html {
   top: 0;
   left: 0;
   color: #fff;
-  background-color: #000;
+  background-color: #000000da;
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -304,5 +308,97 @@ html {
 .open {
   visibility: visible;
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    -ms-grid-columns: unset;
+        grid-template-columns: unset;
+  }
+  .container > .sidebar {
+    position: initial;
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 5% 5%;
+  }
+  .container > .sidebar > figure {
+    margin-bottom: 5%;
+  }
+  .container > .sidebar > figure > img {
+    width: 60%;
+    border-radius: 50%;
+  }
+  .container > .sidebar > nav > button {
+    margin-bottom: 5%;
+    padding: 3% 0;
+  }
+  .container > .sidebar > address {
+    margin-top: initial;
+  }
+  .container > main {
+    min-height: unset;
+    grid-column: unset;
+    padding: 10% 5%;
+  }
+  .container > main > .skill {
+    margin-bottom: 10%;
+  }
+  .container > main > .skill > ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container > main > .skill > ul > li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+  .container > main > .experience {
+    margin-bottom: 10%;
+  }
+  .container > main > .experience > .ex-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: center;
+  }
+  .container > main > .experience > .ex-content > img {
+    width: 100%;
+    margin: 10% auto;
+  }
+  .container > main .portfolio > a {
+    margin-bottom: 5%;
+  }
+  .container > main .portfolio > .gallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-auto-rows: minmax(-webkit-min-content, 250px);
+    grid-auto-rows: minmax(min-content, 250px);
+  }
+  .container > main .portfolio > .gallery > .large-img-1 {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .container > main .portfolio > .gallery > .large-img-2 {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .container > main .portfolio > .gallery > .large-img-3 {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .container > main .portfolio > .gallery > .large-img-4 {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .container > main .portfolio > .gallery > .large-img-5 {
+    grid-column: unset;
+    grid-row: unset;
+  }
+  .container > main .portfolio > .gallery > .large-img-6 {
+    grid-column: unset;
+    grid-row: unset;
+  }
 }
 /*# sourceMappingURL=resume.css.map */

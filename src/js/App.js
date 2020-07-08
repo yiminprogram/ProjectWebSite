@@ -38,6 +38,7 @@ const portfolio = () => {
   modal.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal')) {
       modal.classList.remove('open');
+      document.body.style.overflowY = 'scroll';
       tagImg.setAttribute('src', '');
     }
   })
@@ -49,6 +50,7 @@ const portfolio = () => {
       tagImg.setAttribute('src', src);
       tagName.textContent = fileName;
       modal.classList.add('open');
+      document.body.style.overflowY = 'hidden';
     }
   })
 }
