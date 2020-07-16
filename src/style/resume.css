@@ -1,4 +1,13 @@
 @charset "UTF-8";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .container > main > .skill, .container > main > .experience {
   border-left: 10px solid #28a745;
   background-color: #fff;
@@ -11,34 +20,7 @@
   font-size: 0.9rem;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-:root {
-  font-size: calc(1.325rem + 0.9vw);
-}
-
-body,
-html {
-  font-size: 0.6rem;
-  font-family: 'Microsoft JhengHei';
-  line-height: 2;
-}
-
-.container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 20vw 1fr;
-      grid-template-columns: 20vw 1fr;
-}
-
-.container > .sidebar {
+.sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,27 +39,27 @@ html {
   background-color: #161d2e;
 }
 
-.container > .sidebar > figure {
+.sidebar > figure {
   text-align: center;
   margin-bottom: 10%;
 }
 
-.container > .sidebar > figure > img {
+.sidebar > figure > img {
   width: 80%;
   border-radius: 50%;
 }
 
-.container > .sidebar > figure > figcaption {
+.sidebar > figure > figcaption {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-.container > .sidebar > nav {
+.sidebar > nav {
   width: 100%;
   text-align: center;
 }
 
-.container > .sidebar > nav > button {
+.sidebar > nav > button {
   cursor: pointer;
   width: 60%;
   color: #fff;
@@ -90,26 +72,44 @@ html {
   border-radius: 30px;
 }
 
-.container > .sidebar > nav > button:hover {
+.sidebar > nav > button:hover {
   color: #161d2e;
   background-color: #fff;
 }
 
-.container > .sidebar > nav > button:focus {
+.sidebar > nav > button:focus {
   outline: none;
 }
 
-.container > .sidebar > nav .change-color {
+.sidebar > nav .change-color {
   color: #161d2e;
   background-color: #fff;
 }
 
-.container > .sidebar > address {
+.sidebar > address {
   width: 100%;
   margin-top: auto;
   word-wrap: break-word;
   font-size: 0.5rem;
   text-align: center;
+}
+
+:root {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+body,
+html {
+  font-size: 0.6rem;
+  font-family: "Microsoft JhengHei";
+  line-height: 2;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20vw 1fr;
+      grid-template-columns: 20vw 1fr;
 }
 
 .container > main {
