@@ -1,0 +1,63 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 20vw;
+  height: 100vh;
+  padding: 2% 2%;
+  color: #fff;
+  background-color: #161d2e;
+  //-----------------------------------------------------------------
+  > figure {
+    text-align: center;
+    margin-bottom: 10%;
+    > img {
+      width: 80%;
+      border-radius: 50%;
+    }
+
+    > figcaption {
+      font-size: $font-l;
+      font-weight: bold;
+    }
+  }
+  //-------------------------------------------------------------
+  > nav {
+    width: 100%;
+    text-align: center;
+    > button {
+      cursor: pointer;
+      width: 60%;
+      color: #fff;
+      background-color: #161d2e;
+      border: 1px solid #fff;
+      margin-bottom: 10%;
+      font-size: $font-sm;
+      font-weight: bold;
+      padding: 15px 0;
+      border-radius: 30px;
+
+      &:hover {
+        color: #161d2e;
+        background-color: #fff;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+    .change-color {
+      color: #161d2e;
+      background-color: #fff;
+    }
+  }
+  //--------------------------------------------------------
+  > address {
+    width: 100%;
+    margin-top: auto;
+    word-wrap: break-word;
+    font-size: $font-s;
+    text-align: center;
+  }
+}

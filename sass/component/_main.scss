@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+body,
+html {
+  font-size: 0.6rem;
+  font-family: "Microsoft JhengHei";
+  line-height: 2;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+
+  > main {
+    background-color: #eee;
+    min-height: 100vh;
+    grid-column: 2 / span 2;
+    padding: 5% 10%;
+  }
+}

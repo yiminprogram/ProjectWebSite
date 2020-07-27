@@ -1,4 +1,16 @@
 @charset "UTF-8";
+.skill, .experience {
+  border-left: 10px solid #28a745;
+  background-color: #fff;
+  margin-bottom: 5%;
+  padding: 2% 10%;
+}
+
+.skill > h3, .experience > h3 {
+  padding-left: 1%;
+  font-size: 0.9rem;
+}
+
 *,
 *::before,
 *::after {
@@ -8,16 +20,31 @@
           box-sizing: border-box;
 }
 
-.container > main > .skill, .container > main > .experience {
-  border-left: 10px solid #28a745;
-  background-color: #fff;
-  margin-bottom: 5%;
-  padding: 2% 10%;
+:root {
+  font-size: calc(1.325rem + 0.9vw);
 }
 
-.container > main > .skill > h3, .container > main > .experience > h3 {
-  padding-left: 1%;
-  font-size: 0.9rem;
+body,
+html {
+  font-size: 0.6rem;
+  font-family: "Microsoft JhengHei";
+  line-height: 2;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20vw 1fr;
+      grid-template-columns: 20vw 1fr;
+}
+
+.container > main {
+  background-color: #eee;
+  min-height: 100vh;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+  padding: 5% 10%;
 }
 
 .sidebar {
@@ -94,34 +121,7 @@
   text-align: center;
 }
 
-:root {
-  font-size: calc(1.325rem + 0.9vw);
-}
-
-body,
-html {
-  font-size: 0.6rem;
-  font-family: "Microsoft JhengHei";
-  line-height: 2;
-}
-
-.container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 20vw 1fr;
-      grid-template-columns: 20vw 1fr;
-}
-
-.container > main {
-  background-color: #eee;
-  min-height: 100vh;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2 / span 2;
-  padding: 5% 10%;
-}
-
-.container > main > .skill > ul {
+.skill > ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,18 +133,18 @@ html {
           justify-content: center;
 }
 
-.container > main > .skill > ul > li {
+.skill > ul > li {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 30%;
           flex: 0 1 30%;
   padding: 1%;
 }
 
-.container > main > .skill > ul > li::before {
+.skill > ul > li::before {
   content: "💻 ";
 }
 
-.container > main > .experience > .ex-content {
+.experience > .ex-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,17 +156,17 @@ html {
           align-items: center;
 }
 
-.container > main > .experience > .ex-content > img {
+.experience > .ex-content > img {
   width: 50%;
   -webkit-box-shadow: 5px 5px 10px 5px #ddd;
           box-shadow: 5px 5px 10px 5px #ddd;
 }
 
-.container > main > .experience > .ex-content > .ex-text {
+.experience > .ex-content > .ex-text {
   padding: 5%;
 }
 
-.container > main .portfolio {
+.portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,19 +176,19 @@ html {
           flex-direction: column;
 }
 
-.container > main .portfolio > h3 {
+.portfolio > h3 {
   font-size: 0.9rem;
   text-align: center;
   padding: 1% 0;
 }
 
-.container > main .portfolio > a {
+.portfolio > a {
   text-align: center;
   font-size: 0.9rem;
   margin-bottom: 3%;
 }
 
-.container > main .portfolio > .gallery {
+.portfolio > .gallery {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -201,12 +201,12 @@ html {
           box-shadow: 0 0 10px 10px #ddd;
 }
 
-.container > main .portfolio > .gallery > .img-container {
+.portfolio > .gallery > .img-container {
   overflow: hidden;
   border: 1px solid #aaaaaa50;
 }
 
-.container > main .portfolio > .gallery > .img-container > img {
+.portfolio > .gallery > .img-container > img {
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -216,12 +216,12 @@ html {
   transition: 0.2s;
 }
 
-.container > main .portfolio > .gallery > .img-container > img:hover {
+.portfolio > .gallery > .img-container > img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.container > main .portfolio > .gallery > .large-img-1 {
+.portfolio > .gallery > .large-img-1 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2 / span 2;
@@ -230,7 +230,7 @@ html {
   grid-row: 1 / span 2;
 }
 
-.container > main .portfolio > .gallery > .large-img-2 {
+.portfolio > .gallery > .large-img-2 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
@@ -239,7 +239,7 @@ html {
   grid-row: 3 / span 2;
 }
 
-.container > main .portfolio > .gallery > .large-img-3 {
+.portfolio > .gallery > .large-img-3 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2 / span 2;
@@ -248,7 +248,7 @@ html {
   grid-row: 5 / span 2;
 }
 
-.container > main .portfolio > .gallery > .large-img-4 {
+.portfolio > .gallery > .large-img-4 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
@@ -257,7 +257,7 @@ html {
   grid-row: 7 / span 2;
 }
 
-.container > main .portfolio > .gallery > .large-img-5 {
+.portfolio > .gallery > .large-img-5 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2 / span 2;
@@ -266,7 +266,7 @@ html {
   grid-row: 9 / span 2;
 }
 
-.container > main .portfolio > .gallery > .large-img-6 {
+.portfolio > .gallery > .large-img-6 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
