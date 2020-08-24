@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>作品集列表</title>
+    <meta http-equiv="refresh" content="0;url=https://yiminprogram.github.io/portfolio/#/" />
+    <title>網址轉換中</title>
     <style>
+      @keyframes anime {
+        0% {
+          width: 30%;
+        }
+        16% {
+          width: 20%;
+        }
+        32% {
+          width: 10%;
+        }
+        48% {
+          width: 0%;
+        }
+        64% {
+          width: 10%;
+        }
+        80% {
+          width: 20%;
+        }
+        96% {
+          width: 30%;
+        }
+      }
       *,
       *::before,
       *::after {
@@ -12,101 +36,37 @@
         padding: 0;
         box-sizing: border-box;
       }
+      html,
       body {
-        color: #fff;
-        background-color: #111;
-        font-family: "Microsoft JhengHei";
+        font-size: 36px;
+        font-weight: bold;
+        font-family: "Consolas";
       }
-
       .container {
-        width: 80%;
-        margin: 5% auto;
-        text-align: center;
-      }
-      .container > h1 {
-        color: #fff;
-        font-size: 60px;
-        text-shadow: 0 0 10px #fc0;
-      }
-
-      .card-container {
         display: flex;
-        flex-flow: wrap;
         justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
       }
-      .card {
-        width: 250px;
-        height: 250px;
-        margin: 10vmin 5vmin;
+      .title {
         position: relative;
-        transform: rotate(-10deg);
-        opacity: 0.5;
-        transition: 0.3s;
-        text-decoration: none;
       }
-      .card::before {
-        content: "";
+      .title::before {
         position: absolute;
-        top: -6%;
-        left: -6%;
-        width: 112%;
-        height: 112%;
-        background: linear-gradient(235deg, #ff6666, #6666ff);
-        z-index: -1;
-        animation: borderRGB 3s linear infinite;
-      }
-      .card:hover {
-        opacity: 1;
-        transform: rotate(0);
-      }
-      .card > img {
-        width: 100%;
+        content: "";
+        width: 30%;
         height: 100%;
-        object-fit: cover;
-        z-index: 1;
-      }
-      .card > h2 {
-        color: #fff;
-        margin-top: 5%;
-      }
-
-      .card > h3 {
-        color: #fff;
-      }
-
-      @keyframes borderRGB {
-        0% {
-          filter: hue-rotate(0) blur(10px);
-        }
-        100% {
-          filter: hue-rotate(365deg) blur(10px);
-        }
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        animation: anime 1s linear infinite;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>作 品 集</h1>
-      <div class="card-container">
-        <a class="card" href="./src/Homepage.html">
-          <img src="./src/image/website-screenshot/HomePage1.jpg" alt="erro" />
-          <h2>專案作品(首頁)</h2>
-        </a>
-        <a class="card" href="./src/SpaceSearch.html">
-          <img src="./src/image/website-screenshot/SpaceSearch.jpg" alt="erro" />
-          <h2>專案作品(搜尋頁面)</h2>
-        </a>
-        <a class="card" href="./src/resume.html">
-          <img src="./src/image/resume.jpg" alt="erro" />
-          <h2>線上履歷</h2>
-        </a>
-        <a class="card" href="https://github.com/yiminprogram/react-tech-research">
-          <img src="./src/image/AQISearch.jpg" alt="erro" />
-          <h2>ReactJS Demo網站</h2>
-          <h3>(建置研究中)</h3>
-          <h3>(說明列表附帶網站連結)</h3>
-        </a>
-      </div>
+      <h1 class="title">Loading...</h1>
     </div>
   </body>
 </html>
