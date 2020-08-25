@@ -3,30 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta http-equiv="refresh" content="0;url=https://yiminprogram.github.io/portfolio/#/" /> -->
+    <meta http-equiv="refresh" content="0;url=https://yiminprogram.github.io/portfolio/#/" />
     <title>網址轉換中</title>
     <style>
       @keyframes anime {
-        0% {
-          width: 30%;
+        from {
+          transform: rotate(365deg);
         }
-        16% {
-          width: 20%;
-        }
-        32% {
-          width: 10%;
-        }
-        48% {
-          width: 0%;
-        }
-        64% {
-          width: 10%;
-        }
-        80% {
-          width: 20%;
-        }
-        96% {
-          width: 30%;
+        to {
+          transform: rotate(0deg);
         }
       }
       *,
@@ -44,29 +29,23 @@
       }
       .container {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100vw;
         height: 100vh;
       }
-      .title {
-        position: relative;
-      }
-      .title::before {
-        position: absolute;
-        content: "";
-        width: 30%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        background-color: #fff;
-        animation: anime 1s linear infinite;
+      .loading-img {
+        margin-top: 1em;
+        width: 3%;
+        animation: anime 1s infinite linear;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1 class="title">Loading...</h1>
+      <h1>Loading...</h1>
+      <img class="loading-img" src="./src/image/material-sync.svg" alt="error" />
     </div>
   </body>
 </html>
